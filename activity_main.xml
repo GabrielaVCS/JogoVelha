@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="application.example.com.jogovelha.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:text="@string/bem_vindo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_weight="0.07"
+        android:layout_marginBottom="10dp"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/como_jogar"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:textSize="17dp"
+                android:layout_weight="0.14"
+                android:layout_marginLeft="46dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:text="Primeiro escolha contra quem quer jogar."
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_weight="0.14"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="253dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center">
+                    <RadioButton
+                        android:text="Outra pessoa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/pessoa"
+                        android:layout_weight="0.07" />
+
+
+                    <RadioButton
+                        android:text="Computador"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/computador"
+                        android:layout_weight="0.07"
+                        android:onClick="Escolher_jogador"/>
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="Depois com qual jogador quer começar?"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal">
+
+                <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="253dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center">
+                    <RadioButton
+                        android:text="Jogador X"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/x"
+                        android:layout_weight="0.07" />
+
+
+                    <RadioButton
+                        android:text="Jogador O"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/o"
+                        android:layout_weight="0.07" />
+
+                </LinearLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:text="@string/como_jogar2"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="46dp"
+                android:layout_marginBottom="5dp"/>
+
+            <Button
+                android:text="Começar"
+                android:layout_width="259dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/iniciar"
+                android:onClick="iniciar"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado1"
+                    android:id="@+id/quadrado1"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado2"
+                    android:id="@+id/quadrado2"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado3"
+                    android:id="@+id/quadrado3"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado4"
+                    android:id="@+id/quadrado4"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado5"
+                    android:id="@+id/quadrado5"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado6"
+                    android:id="@+id/quadrado6"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado7"
+                    android:id="@+id/quadrado7"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado8"
+                    android:id="@+id/quadrado8"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:tag="quadrado9"
+                    android:id="@+id/quadrado9"
+                    android:onClick="onclickQuadrado"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/movimentos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView8"
+                        android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/movimentos"
+                        android:layout_marginLeft="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="@string/vencedor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vencedor"
+                        android:layout_marginLeft="5dp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:text="Recomeçar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/novoJogo"
+                    android:layout_weight="1"
+                    android:onClick="novoJogo"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/white"/>
+
+
+                <Button
+                    android:text="Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button"
+                    android:layout_weight="0.07" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Jogo da Velha</string>
+    <string name="bem_vindo">Bem Vindo</string>
+    <string name="como_jogar">Como jogar?</string>
+    <string name="como_jogar2">Por último selecione o botão no lugar onde deseja fazer a jogada e Boa sorte!!!</string>
+    <string name="vencedor">Vencedor:</string>
+    <string name="movimentos">Quantidade de movimentos:</string>
+</resources>
